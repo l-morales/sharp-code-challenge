@@ -1,0 +1,111 @@
+<!-- Navbar, full width -->
+<div class="container-fluid navbar-container">
+  <div class="container">
+    <div class="row">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">
+          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/5b/Sharp-logo.svg/1280px-Sharp-logo.svg.png" alt="" height="37" width="111"/>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Find a Doctor <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Locations</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Medical Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Insurance</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Classes and Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Health News</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<!-- Body of page, contained -->
+<div class="container app-container">
+  <h1>Find a Doctor</h1>
+
+  <!-- todo: move section markup to generic/shareable template/component.  -->
+  <!-- Section: Family Practice Doctors -->
+  <div class="row section">
+    <div class="col-6 col-sm-6 col-md-4 section-headline-container">
+      <h2 class="section-headline">Family Practice Doctors</h2>
+    </div>
+    <div class="col-6 col-sm-6 col-md-4">
+      <select class="custom-select" (change)="handleSort($event)" data-practice="familyPracticeDoctors">
+        <option selected>Sort by</option>
+        <option value="desc">Top rated</option>
+        <option value="asc">Lowest rated</option>
+      </select>
+    </div>
+    <div class="col-0 col-sm-0 col-md-4"></div>
+    <ng-template ngFor let-doctor [ngForOf]="familyPracticeDoctors">
+      <div class="card col-12 col-sm-6 col-md-4 doctor-profile">
+        <img class="card-img-top img-responsive" src="https://avatars.dicebear.com/v2/{{doctor.gender}}/{{doctor.name || 'noname'}}.svg" alt="{{doctor.name}}, Doctor in {{doctor.specialty}}" width="160" height="120">
+        <div class="card-body">
+          <div class="section-group">
+            <h5 class="card-title">Dr. {{doctor.name}}</h5>
+            <a href="#" class="card-link">Reviews <span class="badge badge-primary">{{doctor.reviewCount}}</span></a>
+          </div>
+          <div class="section-group">
+            <h6 class="card-text">{{doctor.specialty}}</h6>
+            <p class="card-text">{{doctor.location}}</p>
+          </div>
+          <div class="section-cta">
+            <a href="#" class="btn btn-primary">View profile</a>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </div>
+
+  <!-- Section: Pediatric Doctors -->
+  <div class="row section orphan">
+    <div class="col-6 col-sm-6 col-md-4 section-headline-container">
+      <h2 class="section-headline">Pediatrics Doctors</h2>
+    </div>
+    <div class="col-6 col-sm-6 col-md-4">
+      <select class="custom-select" (change)="handleSort($event)" data-practice="pediatricDoctors">
+        <option selected>Sort by</option>
+        <option value="desc">Top rated</option>
+        <option value="asc">Lowest rated</option>
+      </select>
+    </div>
+    <div class="col-0 col-sm-0 col-md-4"></div>
+    <ng-template ngFor let-doctor [ngForOf]="pediatricDoctors">
+      <div class="card col-12 col-sm-6 col-md-4 doctor-profile">
+        <img class="card-img-top img-responsive" src="https://avatars.dicebear.com/v2/{{doctor.gender}}/{{doctor.name || 'noname'}}.svg" alt="{{doctor.name}}, Doctor in {{doctor.specialty}}" width="160" height="120">
+        <div class="card-body">
+          <div class="section-group">
+            <h5 class="card-title">Dr. {{doctor.name}}</h5>
+            <a href="#" class="card-link">Reviews <span class="badge badge-primary">{{doctor.reviewCount}}</span></a>
+          </div>
+          <div class="section-group">
+            <h6 class="card-text">{{doctor.specialty}}</h6>
+            <p class="card-text">{{doctor.location}}</p>
+          </div>
+          <div class="section-cta">
+            <a href="#" class="btn btn-primary">View profile</a>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </div>
+
+</div>

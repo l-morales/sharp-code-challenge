@@ -1,0 +1,108 @@
+h1 {
+	margin: 20px 0;
+}
+
+.app-container .doctor-profile {
+  margin: 10px 0 40px 0;
+  padding-top: 20px;
+  width: 100%;
+  max-width: 100%;
+}
+
+.app-container .section {
+  margin: 50px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.app-container .section.orphan {
+  border-bottom: none;
+}
+
+.app-container .section-headline {
+  font-size: 18px;
+}
+
+.app-container .section-headline-container {
+  margin-bottom: 14px;
+}
+
+.app-container .section-cta { margin: 50px 0 10px 0; }
+.app-container .section-cta .btn {
+  width: 100%;
+  padding: 12px;
+}
+
+.app-container .section-group .card-title,
+.app-container .section-group .card-link {
+  display: inline-block;
+}
+
+.app-container .section-group .card-link {
+  position: absolute;
+  right: 37px;
+}
+
+.navbar-container {
+  background-color: rgba(98, 118, 145, 1);
+}
+
+.navbar-container .navbar {
+  padding: 1rem;
+  width: 100%;
+}
+
+.navbar-container .nav-link {
+  color: #fff;
+  font-size: 14px;
+  padding-right: 24px;
+}
+
+.navbar-container .nav-item.active {
+  border-bottom: 2px solid #fff;
+}
+
+
+@media screen and (min-width: 576px) {
+  .app-container .doctor-profile {
+    margin: 10px 15px 40px 15px;
+    width: 43%;
+    max-width: 43%;
+  }
+
+  .app-container .section-group {
+    margin-bottom: 20px;
+  }
+
+  .app-container .section-group .card-title,
+  .app-container .section-group .card-link {
+    display: block;
+  }
+
+  .app-container .section-group .card-title {
+    margin-bottom: 8px;
+  }
+  .app-container .section-group .card-link {
+    position: static;
+  }
+
+  .app-container .section-headline {
+    font-size: 22px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .app-container .doctor-profile {
+    width: 30%;
+    max-width: 30%;
+  }
+
+  .app-container .section-group .card-title,
+  .app-container .section-group .card-link {
+    display: inline-block;
+  }
+
+  .app-container .section-group .card-link {
+    position: absolute;
+    right: 37px;
+  }
+}

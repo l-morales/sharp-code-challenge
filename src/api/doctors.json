@@ -1,0 +1,11 @@
+[
+    { "name": "Sharon",  "gender": "female", "specialty": "FamilyPractice", "reviewCount": 3, "location": "13010 Poway Rd,Poway, CA 92064"},
+    { "name": "Walter",  "gender": "male", "specialty": "Pediatrics", "reviewCount": 4, "location": "16899 W Bernardo Dr,San Diego, CA 92127"},
+    { "name": "Christy", "gender": "female", "specialty": "Pediatrics",     "reviewCount": 1, "location": "16899 W Bernardo Dr,San Diego, CA 92127" },
+    { "name": "Shane", "gender": "male", "specialty": "Pediatrics", "reviewCount": 2, "location": "10670 Wexford St.,San Diego, CA 92131" },
+    { "name": "Lindy", "gender": "female", "specialty": "FamilyPractice", "reviewCount": 5, "location": "13010 Poway Rd,Poway, CA 92064" },
+    { "name": "Ron", "gender": "male", "specialty": "FamilyPractice", "reviewCount": 9, "location": "13010 Poway Rd,Poway, CA 92064" },
+    { "name": "", "gender": "", "specialty": null, "reviewCount": 5, "location": "10670 Wexford St.,San Diego, CA 92131" },
+    { "name": "Randy",  "gender": "male", "specialty": "PlasticSurgeon", "reviewCount": 7, "location": "13010 Poway Rd,Poway, CA 92064" },
+    { "name": "Johanna", "gender": "female", "specialty": "FamilyPractice", "reviewCount": 2, "location": "16899 W Bernardo Dr,San Diego, CA 92127" }
+]
